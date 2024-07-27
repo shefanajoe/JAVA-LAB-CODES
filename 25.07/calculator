@@ -1,0 +1,54 @@
+import java.util.Scanner;
+public class Main
+{
+    public int add(int a,int b)
+    {
+        return a+b;
+    }
+    public int sub(int a,int b)
+    {
+        return a-b;
+    }
+    public int mul(int a,int b)
+    {
+        return a*b;
+    }
+    public int div(int a,int b)
+    {
+        return a/b;
+    }
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        Main m=new Main();
+        int n=1;
+        while(n==1)
+        {
+            System.out.println("Enter operation(add/sub/mul/div):");
+            String op=obj.nextLine();
+            System.out.println("Enter num1:");
+            int n1=obj.nextInt();
+            System.out.println("Enter num2:");
+            int n2=obj.nextInt();
+            if(op.equals("add"))
+            {
+                System.out.println(m.add(n1,n2));
+            }
+            if(op.equals("sub"))
+            {
+                System.out.println(m.sub(n1,n2));
+            }
+            if(op.equals("mul"))
+            {
+                System.out.println(m.mul(n1,n2));
+            }
+            if(op.equals("div"))
+            {
+                System.out.println(m.div(n1,n2));
+            }
+            System.out.println("Do u wish to continue (1 for yes/0 for no):");
+            n=obj.nextInt();
+            
+        }
+    }
+}
